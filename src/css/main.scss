@@ -1,0 +1,46 @@
+@import 'vars';
+
+@import "mq";
+@import "fonts";
+
+@import 'buttons';
+@import 'general';
+@import 'seatstack';
+@import '_details';
+@import 'legend';
+@import 'ticker';
+@import 'resultstable';
+@import 'parties';
+@import 'newsticker';
+
+body {
+    @include fs-bodyCopy(2);
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+
+
+// Uncomment for embeds
+
+// Uncomment for full screen (including immersive article main media)
+//@import "fullscreen";
+
+.element-atom,
+.interactive-atom {
+    margin: 0 !important;
+}
+
+
+// Uncomment for embeds
+//@import "embed";
+
+// Uncomment for full screen (including immersive article main media)
+//@import "fullscreen";
+
+.element-atom,
+.interactive-atom {
+    margin: 0 !important;
+}
