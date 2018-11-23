@@ -26,6 +26,9 @@ body {
 	max-width: 100%;
 	display: inline-block;
 	overflow: hidden;
+    box-sizing: border-box;
+    margin: auto;
+    display: inline-block;
 }
 
 .element-atom,
