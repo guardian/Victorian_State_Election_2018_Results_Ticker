@@ -78,7 +78,7 @@ export class Electron {
 
         self.loadstar()
 
-        window.setInterval(() => this.fetchDataAndRender(), 20000);
+        window.setInterval(() => this.fetchDataAndRender(), 30000);
         
     });
 
