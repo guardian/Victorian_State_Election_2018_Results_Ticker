@@ -231,11 +231,13 @@ export class Electron {
 
     self.create()
 
+    /*
    if (self.isApp) {
       $("#console").innerHTML = "Version IOS"
     } else {
       $("#console").innerHTML = "Version X"
     }
+    */
 
 
   }
