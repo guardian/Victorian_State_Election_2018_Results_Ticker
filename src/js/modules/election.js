@@ -18,7 +18,7 @@ export class Electron {
 
     this.api = "https://interactive.guim.co.uk/docsdata/1efGTW-zJnaxdvAUPQFU7I39TnfO9e6itzqMiyKV3_JU.json" ;
 
-    this.isApp = (window.location.origin === "file://" && /iPhone/i.test(navigator.userAgent) || window.location.origin === "file://" && /iPad/i.test(navigator.userAgent)) ? true : false ; 
+    this.isApp = (window.location.origin === "file://") ? true : false ; 
 
     this.database = {
       timestamp: "",
@@ -33,7 +33,7 @@ export class Electron {
       partyListRight: [],
       electionSelection: function(num) {
         
-          return (num / self.totalSeats) * 100
+          return (num / self.database.TOTAL_SEATS) * 100
 
       },
       seatDisplay: function(num) {
@@ -42,6 +42,12 @@ export class Electron {
 
       }
 
+    }
+
+   if (self.isApp) {
+      var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      $("#appticker").style.maxWidth = `${width}px`;
+      
     }
 
     this.init() ;
@@ -216,7 +222,7 @@ export class Electron {
     var self = this
 
     this.ractive = new Ractive({
-        el: '#app',
+        el: '#appticker',
         data: self.database,
         template: template
     })

@@ -28,7 +28,7 @@ $duration: 20s;
 }
 
 .ticker-wrap {
-
+  
   border-top:    1px dotted  lightgrey;
   border-bottom: 1px dotted lightgrey;
   width: 100%;
@@ -41,7 +41,7 @@ $duration: 20s;
   font-family: "Guardian Text Sans Web","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
 
   .ticker {
-
+    width: 100%;
     display: inline-block;
      height: 40px;
      
