@@ -1,5 +1,5 @@
 * { box-sizing: border-box; }
-$duration: 30s;
+$duration: 20s;
 
 @-webkit-keyframes ticker {
   0% {
@@ -73,3 +73,10 @@ $duration: 30s;
 
 }
 
+.iOS-device {
+    box-sizing: border-box;
+    width: 100%;
+    margin: auto;
+    display: inline-block;
+    padding-right: 25px;
+}

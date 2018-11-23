@@ -18,7 +18,7 @@ export class Electron {
 
     this.api = "https://interactive.guim.co.uk/docsdata/1efGTW-zJnaxdvAUPQFU7I39TnfO9e6itzqMiyKV3_JU.json" ;
 
-    this.isApp = (window.location.origin === "file://") ? true : false ; 
+    this.isApp = (window.location.origin === "file://" && /iPhone/i.test(navigator.userAgent) || window.location.origin === "file://" && /iPad/i.test(navigator.userAgent)) ? true : false;
 
     this.database = {
       timestamp: "",
@@ -47,6 +47,7 @@ export class Electron {
    if (self.isApp) {
       var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
       $("#appticker").style.maxWidth = `${width}px`;
+      $("body").style.maxWidth = `${width}px`;
       
     }
 
@@ -78,7 +79,7 @@ export class Electron {
 
         self.loadstar()
 
-        window.setInterval(() => this.fetchDataAndRender(), 30000);
+        window.setInterval(() => this.fetchDataAndRender(), 20000);
         
     });
 
