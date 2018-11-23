@@ -4,6 +4,8 @@
 	    
 	    <h2>Victorian State Election 2018<br><span id="timeStamp">{{timestamp}}</span></h2>
 
+	    {{#if isApp}}
+	    {{else}}
 	    {{#if ticker}}
 		<div class="ticker-wrap">
 			<div class="ticker">
@@ -13,6 +15,7 @@
 				{{/each}}
 			</div>
 		</div>
+		{{/if}}
 		{{/if}}
 
 	    <div id="senatestack">
