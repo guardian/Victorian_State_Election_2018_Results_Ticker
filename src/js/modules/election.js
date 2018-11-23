@@ -18,7 +18,7 @@ export class Electron {
 
     this.api = "https://interactive.guim.co.uk/docsdata/1efGTW-zJnaxdvAUPQFU7I39TnfO9e6itzqMiyKV3_JU.json" ;
 
-    this.isApp = (/iPad|iPhone|iPod/.test(navigator.userAgent) && window.location.origin === "file://") ? true : false;
+    this.isApp = (!!navigator.platform.match(/iPhone|iPod|iPad/) && window.location.origin === "file://") ? true : false;
 
     this.database = {
       timestamp: "",
